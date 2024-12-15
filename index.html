@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ball Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans flex justify-center items-center h-screen bg-gradient-to-r from-purple-600 via-indigo-400 to-blue-400">
+  
+  <div id="gameContainer" class="flex flex-col items-center w-full p-4">
+    <div id="startScreen" class="block text-center">
+      <h1 class="text-4xl font-bold text-white mb-4">Ball Game</h1>
+      <input type="text" id="playerName" placeholder="Enter your name" class="border p-2 mb-4 rounded text-lg"/>
+      <button id="startButton" class="bg-blue-500 text-white px-6 py-2 rounded">Start Game</button>
+      <p id="lastPlayerInfo" class="text-white mt-4"></p>
+    </div>
+
+    <canvas id="gameCanvas" class="border-2 border-black mt-4 max-w-full h-auto"></canvas>
+    
+    <div id="gameOverScreen" class="text-center text-white mt-4" style="display:none;">
+      <div class="text-2xl font-bold">Game Over!</div>
+      <div class="text-xl">Player: <span id="gameOverPlayer"></span></div>
+      <div class="text-xl">Score: <span id="currentScore"></span></div>
+      <div class="text-xl">High Score: <span id="highScore"></span></div>
+      <div class="text-xl">Lives: <span id="currentLives"></span></div>
+      <button id="playAgainButton" class="bg-green-500 text-white px-6 py-2 rounded mt-4">Play Again</button>
+      <button id="resetButton" class="bg-red-500 text-white px-6 py-2 rounded mt-2">Reset High Score</button>
+      <button id="pauseButton" class="bg-yellow-500 text-white px-6 py-2 rounded mt-2">Pause</button>
+      
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+
+</body>
+</html>
